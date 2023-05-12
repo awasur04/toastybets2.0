@@ -1,24 +1,17 @@
 const config = require('./config.json');
-const { Client, Intents } = require('discord.js');
+const { Client, GatewayIntentBits } = require('discord.js');
 const fs = require('fs');
 
 /**
  * Define the intents that are going to be used by the bot
  * Reference: https://discord.com/developers/docs/topics/gateway
- */
-const intents = new Intents();
-intents.add(
-	"GUILDS",
-	"GUILD_MESSAGES",
-	"GUILD_MESSAGE_REACTIONS",
-	"DIRECT_MESSAGES",
-	"DIRECT_MESSAGE_REACTIONS"
-);
-
-/**
  * Create discord client with the defined intents
  */
-const client = new Client({ intents: intents });
+const client = new Client({
+	intents: [
+		GatewayIntentBits.Guilds
+	],
+});
 
 /**
  * initialize: Connect the bot application to discord and register events / commands
