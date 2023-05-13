@@ -1,0 +1,22 @@
+{
+  "name": "toastybets2.0",
+  "version": "1.0.0",
+  "description": "Discord sports betting bot with discord.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awasur04/toastybets2.0.git"
+  },
+  "author": "awasur04",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awasur04/toastybets2.0/issues"
+  },
+  "homepage": "https://github.com/awasur04/toastybets2.0#readme",
+  "dependencies": {
+    "discord.js": "^14.11.0"
+  }
+}
