@@ -1,6 +1,10 @@
 # toastybets2.0
 New and improved toastybets discord bot
 
+# Node.js Installation
+Make sure you have node.js version 18.16.0 or newer installed.
+You can download the installer here: https://nodejs.org/en/download
+
 # Config file template
 Create a new file under the main directory named config.json, put the following code inside your file.
 ```
@@ -18,7 +22,7 @@ guildId: Your development server's id (Enable developer mode > Right-click the s
 ```
 Note: The guildId is not required and can be left as is.
 
-This is what your project directory should look like https://i.imgur.com/6DkRuV0.png
+This is what your project directory should look like: https://i.imgur.com/6DkRuV0.png
 
 # Running the bot
 Once you have created your config file, just run that start.bat file and the bot will start automatically
