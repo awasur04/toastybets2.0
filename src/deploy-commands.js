@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const { REST, Routes } = require('discord.js');
-const { clientId, token } = require('./config.json');
+const { clientId, token } = require('../config.json');
 // Include filesystem and path modules
 const fs = require('node:fs');
 const path = require('node:path');
