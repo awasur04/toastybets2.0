@@ -2,10 +2,10 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Replies with Pong!'),
+		.setName('register')
+		.setDescription('Register to join ToastyBets for this discord server.'),
 	async execute(interaction)
 	{
-		await interaction.reply('Pong!');
+		await interaction.reply('You have joined!');
 	},
 };
