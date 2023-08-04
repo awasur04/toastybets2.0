@@ -1,5 +1,5 @@
-config.json
-
-src/config.json
-
 node_modules/
+build/
+.editorconfig
+src/config.json
+.env
