@@ -7,7 +7,7 @@ export default (client: Client): void =>
 	{
 		if (interaction.isCommand() || interaction.isContextMenuCommand())
 		{
-			await handleSlashCommand(client, interaction)
+			await handleSlashCommand(client, interaction);
 		}
 	})
 }
@@ -25,3 +25,4 @@ const handleSlashCommand = async (client: Client, interaction: CommandInteractio
 
 	slashCommand.run(client, interaction);
 }
+
