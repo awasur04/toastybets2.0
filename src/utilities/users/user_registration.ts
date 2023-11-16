@@ -1,17 +1,15 @@
 import { ButtonInteraction, CacheType, CommandInteraction, ComponentType, DMChannel } from "discord.js";
 import { UserService } from "./user_service";
 import { Menus } from "../chat/menus/menu";
+import { User } from "./user";
 
 
-function startNewUserRegistration(interaction: CommandInteraction) {
-	let accountId = interaction.user.id;
-	let guildId = interaction.guild?.id;
-
-	if (accountId != undefined && guildId != undefined) {
+function startNewUserRegistration(interaction: CommandInteraction, currentUser: User) {
+	if (currentUser.discordId != undefined && currentUser.guildId != undefined) {
 
 		interaction.user.createDM().then(async (dmMessageChannel: DMChannel) => {
 			dmMessageChannel.send({
-				content: "You are currently registering for Toasty-Bets in the server: " + interaction.guild?.name,
+				content: "Welcome to Toasty-Bets!\nYou are registering in the server: " + interaction.guild?.name,
 			});
 
 			dmMessageChannel.send({
@@ -26,10 +24,9 @@ function startNewUserRegistration(interaction: CommandInteraction) {
 				})
 
 				timeZoneInteraction.on('collect', async menuSelection => {
-					let timeZoneSelection = menuSelection.values[0];
-					await menuSelection.reply("You have selected: " + timeZoneSelection)
-
-					UserService.createUser(interaction, timeZoneSelection);
+					currentUser.timezone = menuSelection.values[0];
+					UserService.createUser(currentUser);
+					await menuSelection.reply("You have successfully registered!");
 				});
 			}
 			catch (e) {

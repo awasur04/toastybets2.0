@@ -19,8 +19,8 @@ let queries = {
 	// SELECT QUERIES
 	getAllGames: "SELECT * FROM scores",
 	getCurrentWeek: "SELECT * FROM scores WHERE week_number=?",
-	getAnyUserById: "SELECT * FROM users WHERE account_id=?",
-	getGuildUserById: "SELECT * FROM users WHERE account_id=? AND guild_id=?",
+	getUserById: "SELECT * FROM users WHERE discord_id=?",
+	getGuildUserById: "SELECT * FROM users WHERE discord_id=? AND guild_id=?",
 	//INSERT QUERIES
 	insertNewUser: "INSERT INTO users (discord_id, guild_id, name, timezone, role, balance, status) VALUES (?, ?, ?, ?, ?, ?, ?)"
 	//UPDATE QUERIES
